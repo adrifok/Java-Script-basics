@@ -1,4 +1,8 @@
                         CLOSURES
+                        
+Un Closure se produce cuando una funcion utiliza variables que no le pertenecen, que estan fuera de su contexto de ejecucion.         
+                        
+                        
 
 function pedirPizza(UID, pizza){
         let cantidadPizzas = 0
@@ -14,6 +18,24 @@ function pedirPizza(UID, pizza){
         console.log(pedidoUID('anchoa'));
         console.log(pedidoUID('bacon'));
         console.log(pedidoUID('marinara'));
+----------------------------------------------------------------------------------------------------------------
+
+function despedirse(nombre){
+    var edad = 20;
+
+    return function(){
+        var ciudad = 'Ciudad de Panama';
+        console.log('adios ' + nombre + ' ' + edad + ' ' + ciudad)
+    }
+}
+
+var despedida = despedirse('Camilo')(30)('Buenos Aires');
+despedida();
+console.log(despedida);
+
+---------------------------------------------------------------------------------------------------------------
+  
+
 
 
 
