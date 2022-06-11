@@ -40,6 +40,25 @@ function LinkedList() {
     creando una variable auxiliar (let aux = current.next) para guardar la info/
     Me tengo que quedar con una copia de lo que tengo para poder avanzar sin perder informacion*/
 
+LinkedList.prototype.remove = function(){
+   if (!this.head) return null;
+    if(!this.head.next){ 
+       let current = this.head.value                     //si solamente hay un nodo
+                                                         //retorno su valor
+       this.head = null;
+       return current;
+    }else{
+     let current = this.head;
+     while(current.next.next !== null){                    //mientras que el siguiente (va avanzando) sea distint
+       current = current.next;
+     }
+           let capturarData = current.next.value; //capturo el valor del nodo siguiente al nodo delante de mi par
+           current.next = null;
+           return capturarData;
+    }
+   }      
+
+
 
 
 
