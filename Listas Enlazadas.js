@@ -57,7 +57,33 @@ LinkedList.prototype.remove = function(){
            return capturarData;
     }
    }      
+//Metodo Search
 
+
+       LinkedList.prototype.search = function(argumento){   
+        
+        if(!this.head) return null;                          //si la lista esta vacia devuelve null
+        var funcionCallback;                               
+        if(typeof argumento != 'function'){      //si el valor no es una funcion lo convierto en una funcion de cb y le paso el valor(typeof devuelve o
+                                                                                                                  //recibe el tipo de valor entre comillas)
+                funcionCallback = function(valor){
+                  return valor === argumento;
+                }
+        }else{
+          funcionCallback = argumento;                 //si el argumento es una funcion le asigno esa misma funcion
+        }  
+        let current = this.head;
+        while (current!= null){                  //mientas el nodo actual(current) es distinto de null
+                                               //si la lista no esta vacia itero nodo x nodo buscando el valor
+          if(funcionCallback(current.value)){   //si el valor de la funcion es igual al valor de la funcion de cb
+          return current.value;         //ejecuto la funcion de cb y si retorna  true es el valor que busco.(callback retorna true o 
+        }else{
+          current = current.next                //sigo recorriendo la lista
+        }
+      }       
+      return null; 
+    }
+    
 
 
 
