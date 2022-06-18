@@ -7,25 +7,25 @@ function mergeSort(array) {
   //tu código:
      if(array.length === 1) return array;                   //si esta ordenado se devuelve el array tal cual esta (caso base de corte
 
-     let mid = Math.floor(array.length / 2);                    //divido el array al medio con redondeo 
-     let left = array.slice(0, mid);                            //rebano el array desde la psosicion 0 al medio que defini con mid
+     let mid = Math.floor(array.length / 2);                    //divido el array al medio con redondeo (mid = mitad del array)
+     let left = array.slice(0, mid);                            //rebano el array desde la posicion 0 al medio que defini con mid
      let right = array.slice(mid);                            //rebano desde el mid en adelante hacia la derecha
-     return merge(mergeSort(left),mergeSort(right));        //invoco la funcion merge (unir) pasandole left y right   
+     return merge(mergeSort(left),mergeSort(right));        //retorno la funcion merge (unir) pasandole left y right   
           }
-     function merge(left, right){                                                //aplico recursion
-      let leftIndex = 0;
-      let rightIndex = 0;
-      let arrOrdered =[];
-      while(leftIndex < left.length && rightIndex < right.length){
-        if(left[leftIndex] < right[leftIndex]){
-          arrOrdered.push(left[leftIndex]);
-          leftIndex++;
+     function merge(left, right){                      //funcion adicional que recibe los dos arreglos y compara los valores a posicionar
+      let array1 = 0;                               //left
+      let array2 = 0;                               //right
+      let arrOrdered =[];                                 ////array donde pusheo los valores ordenados
+      while(array1 < left.length && array2 < right.length){
+        if(left[array1] < right[array1]){          //si el array de la izq en posicion array1 es menor al arreglo de la der (array2)
+          arrOrdered.push(left[array1]);           //al array ordenado le pusheo el array de la izq en la posicion array1
+          array1++;
         }else{
-          arrOrdered.push(right[rightIndex]);
-          rightIndex++;
+          arrOrdered.push(right[array2]);           //si es mayor,al array ordenado le pusheo el array de la der en la posicion array2
+          array2++;
         }
         }
-        return arrOrdered.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+        return arrOrdered.concat(left.slice(array1)).concat(right.slice(array2));     //retorno array ordenado y concatenado
 }
 
 
