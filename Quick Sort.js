@@ -1,4 +1,32 @@
-/* Algoritmo Quick Sort (log N)
+function quickSort(array) {
+  // Implementar el método conocido como quickSort para ordenar de menor a mayor
+  // el array recibido como parámetro
+  // Devolver el array ordenado resultante
+  // //Tu codigo aqui:
+      if(array.length <= 1 ) return array;
+
+          let pivot =array[Math.floor(Math.random() * array.length)]; //defino el pivot que es la posicion 0                    
+          let left = [];
+          let right = [];
+          let equals = [];
+          for (let i = 0; array.length; i++) {  //recorro el arreglo
+            
+           if(array[i] <= pivot){  //si el arreglo en la posicion i es menor al pivot lo tiro a la izq
+            left.push(array[i]);                   
+           }else if
+            (array[i] > pivot){    //si el arreglo en la posicion i es mayor al pivot lo tiro a la der
+            right.push(array[i]);
+            }else{
+              equals.push(array[i]);
+            }
+          }
+          
+              return [].concat(quickSort(left).concat(equals).concat(quickSort(right))); // retorno los arreglos concatenados
+                                                 //recursion del metodo quick sort y concatenacion de los dos arrays            
+}
+
+
+/* Algoritmo Quick Sort (log N) codigo explicado
 
 Tengo un array:
 [4, 3, 2, 6, 2, 1, 9]
@@ -30,3 +58,4 @@ der = [9]         equals = [6]         izq =[4,3,2,2,1]
    izq = [vacio]     return ([].concat([1])).concat([2,2])
 
 */
+
