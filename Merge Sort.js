@@ -1,4 +1,34 @@
-/*
+
+function mergeSort(array) {
+  // Implementar el método conocido como mergeSort para ordenar de menor a mayor
+  // el array recibido como parámetro
+  // Devolver el array ordenado resultante
+  // Tu código:
+  //tu código:
+     if(array.length === 1) return array;                   //si esta ordenado se devuelve el array tal cual esta (caso base de corte
+
+     let mid = Math.floor(array.length / 2);                    //divido el array al medio con redondeo 
+     let left = array.slice(0, mid);                            //rebano el array desde la psosicion 0 al medio que defini con mid
+     let right = array.slice(mid);                            //rebano desde el mid en adelante hacia la derecha
+     return merge(mergeSort(left),mergeSort(right));        //invoco la funcion merge (unir) pasandole left y right   
+          }
+     function merge(left, right){                                                //aplico recursion
+      let leftIndex = 0;
+      let rightIndex = 0;
+      let arrOrdered =[];
+      while(leftIndex < left.length && rightIndex < right.length){
+        if(left[leftIndex] < right[leftIndex]){
+          arrOrdered.push(left[leftIndex]);
+          leftIndex++;
+        }else{
+          arrOrdered.push(right[rightIndex]);
+          rightIndex++;
+        }
+        }
+        return arrOrdered.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+
+
 Merge Sort Algoritmo    n*log2(n)
 
 1.Divide el arreglo en 2 grupos exactamente iguales. En caso de nros impares se elige equilibrar el valor 
