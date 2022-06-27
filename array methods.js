@@ -72,3 +72,5 @@ const totalHighTier = employees.map(elemento => elemento.salary)
 .filter(salary => salary >75000)
 .reduce((total, current) => total + current)
 console.log(totalHighTier);
+
+//font: https://www.youtube.com/watch?v=4hrQtbaHVCQ by Wmedia por Juan Andrés Núñez
