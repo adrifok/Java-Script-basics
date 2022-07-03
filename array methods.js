@@ -74,3 +74,19 @@ const totalHighTier = employees.map(elemento => elemento.salary)
 console.log(totalHighTier);
 
 //font: https://www.youtube.com/watch?v=4hrQtbaHVCQ by Wmedia por Juan Andrés Núñez
+
+//For in method: 
+//La instrucción for-in itera sobre todas las propiedades enumerables de un objeto que está codificado por cadenas 
+//(ignorando los codificados por Símbolos, incluidas las propiedades enumerables heredadas).
+
+const object = { a: 1, b: 2, c: 3 };
+
+for (const property in object) {
+  console.log(`${property}: ${object[property]}`);
+}
+// expected output:
+// "a: 1"
+// "b: 2"
+// "c: 3"
+/------------------------------------------------/
+
