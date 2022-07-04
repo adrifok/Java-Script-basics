@@ -1,3 +1,4 @@
+//How to add or remove elements in a stack (LIFO pattern)
 
 class Node {
     constructor (value){
@@ -54,3 +55,6 @@ class Node {
   stck.pop();									//'value4'
   console.log(stck.pop());   //'value3'
   stck.size;   //2
+
+//font: freecodecamp.org/news/data-structures-in-javascript-with-examples#stacks
+//by German Cocca
