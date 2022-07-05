@@ -61,4 +61,5 @@
         quickQueue.enqueue('value4')
         console.log(quickQueue.dequeue()) //value1
 
-
+//font: freecodecamp.org/news/data-structures-in-javascript-with-examples#stacks
+//by German Cocca
