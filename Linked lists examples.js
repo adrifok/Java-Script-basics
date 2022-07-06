@@ -178,4 +178,5 @@ console.log(listaDePrueba) //(metodo reverse) SinglyLinkedList {head: Node { val
 
 
 
-//font 
+//font : freecodecamp.org/news/data-structures-in-javascript-with-examples#stacks
+//by German Cocca
