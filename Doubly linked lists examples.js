@@ -173,4 +173,5 @@ In double linked lists have their nodes connected trhough pointers with both the
            
 
 
-//font 
+//font: freecodecamp.org/news/data-structures-in-javascript-with-examples#stacks
+//by German Cocca
