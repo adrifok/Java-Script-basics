@@ -112,7 +112,8 @@ arbolDePrueba.contains('adri2');
 console.log(arbolDePrueba.length) //undefined
 console.log(arbolDePrueba.size) //undefined
 
-
+//font: freecodecamp.org/news/data-structures-in-javascript-with-examples#stacks
+//by German Cocca
 
 
 
