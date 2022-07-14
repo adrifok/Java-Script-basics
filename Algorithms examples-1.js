@@ -638,4 +638,5 @@ tree4.insert(8);
 tree4.insert(20);
 console.log(tree4.DFSPostOrder());//[ 10, 6, 3, 8, 15, 20 ]
 
-
+//font: freecodecamp.org/news/data-structures-in-javascript-with-examples#stacks
+//by German Cocca
