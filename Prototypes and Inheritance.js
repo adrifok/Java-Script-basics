@@ -50,6 +50,7 @@ console.log(alien2.name) //Ali
 console.log(alien2.phrase)//I am Ali the alien!
 alien2.fly(); //gggggfffffrrrrqqq!! 
 
-
+//font https://www.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/
+//by German Cocca
 
 
