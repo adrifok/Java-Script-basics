@@ -1,0 +1,30 @@
+//reduce method receives 2 elements = the accumulator value and the iterated element of the array.
+//It returns the new element that will be accumulating. And also receives a 3rd argument that will be the initial value of the accumulator.
+
+//const reducer = (accumulator, actualValue) => newAccumulator;
+
+// const reduced = [1,2].reduce((acc, el) => acc + el, 0); //0 is the initial value when iteration begins
+// console.log(reduced);  //3
+
+
+const numbers = [1,2,3,5,7,10,22,65,89];
+const result1 = numbers.reduce ((acc, el) => acc + el,0);
+console.log(result1);  //204
+
+const puppies =[
+    {name : 'puppy', age : 12, type: 'dog'},
+    {name : 'chanchi', age : 3, type: 'dog'},
+    {name : 'pulga', age : 10, type: 'dog'},
+    {name : 'pelusa', age : 16, type: 'cat'}
+];
+const indexed = puppies.reduce ((acc, el) => ({
+    ...acc,         //...acc, (copy of the accumulator)
+    [el.name]: el,  ////indexed array by the name of the puppy
+}),{})
+console.log(indexed);//{puppy: { name: 'puppy', age: 12, type: 'dog' },chanchi: { name: 'chanchi', age: 3, type: 'dog' },pulga: { name: 'pulga', age: 10, type: 'dog' },pelusa: { name: 'pelusa', age: 16, type: 'cat' }}
+console.log(indexed ['chanchi']);  //{ name: 'chanchi', age: 3, type: 'dog' }
+
+//nested elements in an array trasform to plain array
+const nested = [1, [2, 3],4 ,[5]];  //nested elements in an array
+const plainArray = nested.reduce((acc, el) => acc.concat(el), []);
+console.log(plainArray);   //[ 1, 2, 3, 4, 5 ]

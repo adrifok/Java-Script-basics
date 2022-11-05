@@ -1,0 +1,20 @@
+//filter method of arrays is inmutable. It returns a new copy of the array where returns true for every 
+//iteration of the array that we are filtering. The lenght of the filtered array will be less or equal than the original.
+
+const numeros = [1,2,3,5,7,10,22,65,89];
+
+const mascotas =[
+    {nombre : 'puppy', edad : 12, raza: 'perro'},
+    {nombre : 'chanchi', edad : 3, raza: 'perro'},
+    {nombre : 'pulga', edad : 10, raza: 'perro'},
+    {nombre : 'pelusa', edad : 16, raza: 'gato'}
+];
+
+const filteredNum= numeros.filter (x => x <5)
+console.log(filteredNum, numeros); //[ 1, 2, 3 ] [1, 2, 3, 5,7,10, 22, 65, 89]
+
+const perros = mascotas.filter(x => x.raza == 'perro');
+console.log(perros);//[{ nombre: 'puppy', edad: 12, raza: 'perro' },{ nombre: 'chanchi', edad: 3, raza: 'perro' },{ nombre: 'pulga', edad: 10, raza: 'perro' }]
+  [ { nombre: 'pelusa', edad: 16, raza: 'gato' } ]
+const gatos = mascotas.filter (x => x.raza == 'gato');
+console.log(gatos)  //[ { nombre: 'pelusa', edad: 16, raza: 'gato' } ]
